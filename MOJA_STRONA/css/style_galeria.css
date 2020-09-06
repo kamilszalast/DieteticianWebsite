@@ -1,0 +1,93 @@
+/* Kontener wypozycjonowany na środku z max szerokością */
+.slideshow-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+}
+
+/* Ukrycie zdjęć */
+.zdjecieSlajd {
+    display: none;
+}
+
+.zanikanie img:nth-child(1) {
+    border-radius: 0;
+}
+
+/* Przyciski przełączania zdjęć */
+.nastepny,
+.poprzedni {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white !important;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Przesunięcie przycisku na prawo */
+.nastepny {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.opis {
+    color: black;
+    position: absolute;
+    text-align: center;
+    font-size: 2vw;
+    text-shadow: -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px 1px 0 #fff;
+    font-weight: bold;
+    width: 100%;
+    padding: 8px 0px;
+    bottom: 5px;
+}
+
+@media (max-width: 620px) {
+    .opis {
+        font-size: 3vw;
+    }
+}
+
+/* zachowanie przycisków po najechaniu */
+.poprzedni:hover,
+.nastepny:hover {
+    background-color: rgba(0, 0, 102, 0.8);
+}
+
+/* Zanikanie zdjęć, animacja */
+.zanikanie {
+    -webkit-animation-name: zanikanie;
+    -webkit-animation-duration: 2s;
+    animation-name: zanikanie;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes zanikanie {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes zanikanie {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}

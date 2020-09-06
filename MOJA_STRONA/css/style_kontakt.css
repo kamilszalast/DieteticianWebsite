@@ -1,0 +1,43 @@
+.btn {
+    color: white !important;
+}
+
+#kalkulator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2vw;
+}
+
+#przyciskBMI {
+    display: flex;
+    align-items: flex-end;
+}
+
+@media (max-width: 991px) {
+
+    .row:nth-child(2n) {
+        flex-direction: row;
+    }
+
+    #list {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+}
+
+@media (max-width:385px) {
+
+    .table td,
+    .table th {
+        padding: 0 6px;
+    }
+
+    #usuwaniePrzycisk {
+        padding: 3px 3px;
+        margin: 0;
+        margin-left: 8px;
+    }
+
+}
